@@ -1,0 +1,99 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+ 
+
+  
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+
+<body>
+ 
+  <body style="margin:0; height:100vh; background:url('/static/img/loan5.jpg') no-repeat center center/cover;"></body>
+<header class="p-3 opacity-75">
+    <nav>
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-semibold">Loan Prediction</div>
+            <div class="space-x-4">
+                <a href="{% url 'home' %}" class="text-white hover:underline">Home</a>
+                <a href="{% url 'prediction' %}" class="text-white hover:underline">CheckEligibility</a>
+                <a href="{% url 'team' %}" class="text-white hover:underline">Team members</a>
+                <a href="{% url 'logout' %}" class="text-white hover:underline">Logout</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+  <div class="container mx-auto" style="padding-top: 5rem;">
+    <div class="text-center">
+        <h1 class="text-5xl font-bold text-white " style="opacity: 0.75;">Welcome to Our Loan Eligibility Prediction System</h1>
+        <p class="text-2xl mt-4" style="color: #ff7f7f;">Making Informed Loan .</p>
+        <br>
+        <a href="{% url 'prediction' %}" class="buttongetstarted">CheckEligibility</a><br><br>
+
+
+        <section class="transparent-section text-white py-10">
+          <div class="container mx-auto text-center">
+              <div class="flex flex-col items-center space-y-4 md:space-x-4">
+                  <div class="md:w-1/2">
+                      <h2 class="text-3xl font-bold">Join Us Today</h2>
+                      <p>Get started with our Loan Eligibility Prediction Model and make informed decisions.</p>
+                      <p>Your Company Name</p>
+                  </div>
+                  <div class="md:w-1/2">
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+
+  <!-- Additional Content Section -->
+  <section class="transparent-section text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold">Explore Our Features</h2>
+            <p class="text-lg mt-4">Discover all the powerful features of our  prediction platform:</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <div class="card">
+                <h3 class="card-title">Feature 1</h3>
+                <p class="card-description">Description of Feature 1.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Feature 2</h3>
+                <p class="card-description">Description of Feature 2.</p>
+            </div>
+            <div class="card">
+                <h3 class="card-title">Feature 3</h3>
+                <p class="card-description">Description of Feature 3.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- Footer Section -->
+  <footer class="transparent-section  text-white py-4">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">&copy; 2024 Loan Eligibility Prediction. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <div id="loading-spinner" class="hidden">
+    <div class="spinner"></div>
+  </div>
+  <script>
+    // Show the loading spinner when the page starts loading
+    window.addEventListener("load", function () {
+      document.getElementById("loading-spinner").style.display = "none";
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="{% static 'css/signin1.css' %}">
+</head>
+
+<body class="">
+    <div class="signin-container">
+        <h2 class="">Sign In</h2>
+        {% if value == 1 %}
+        <div class="userstatus">
+            <p>Username already exists..</p>
+        </div>
+        {% elif value == 2 %}
+        <div class="userstatus">
+            <p>Email already exists..</p>
+        </div>
+        {% elif value == 3 %}
+        <div class="userstatus">
+            <p>Congratulations!! User Created Successfully...</p>
+            <!-- Redirect to the login page after 0 seconds -->
+            <script>
+                setTimeout(function() {
+                    window.location.href = "/home";
+                }, 0); // Redirect after 0 seconds
+            </script>
+        </div>
+        {% endif %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group mt-4">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required class="w-full border rounded">
+            </div>
+            <div class="form-group mt-4">
+                <label for "email">Email</label>
+                <input type="email" id="email" name="email" required class="w-full border rounded">
+            </div>
+            <div class="form-group mt-4">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required class="w-full border rounded">
+            </div>
+            <div class="form-group mt-6">
+                <input type="submit" value="Sign In" class="w-full cursor-pointer">
+            </div>
+     
+            <p class="text-center">Already a member? <a href="login">Login</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

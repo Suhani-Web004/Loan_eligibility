@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Log In</title>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-800">
+    <div class="signin-container bg-white p-8 rounded shadow-md">
+        <h2 class="text-3xl font-semibold text-center">Log In</h2>
+        {% if LoginError %}
+        <div class='login-error text-red-600 text-center'>
+            {{ LoginError }}
+        </div>
+        {% endif %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group mt-4">
+                <label for="username" class="block font-semibold">Username</label>
+                <input type="text" id="username" name="username" required class="w-full px-4 py-2 border border-gray-300 rounded">
+            </div>
+            <div class="form-group mt-4">
+                <label for="password" class="block font-semibold">Password</label>
+                <input type="password" id="password" name="password" required class="w-full px-4 py-2 border border-gray-300 rounded">
+            </div>
+            <div class="form-group mt-6">
+                <input type="submit" value="LogIn" class="w-full bg-blue-500 text-white px-4 py-2 rounded cursor-pointer">
+            </div>
+            <br>
+            <p class="text-center text-gray-600">Not a Member? <a href="signin" class="text-blue-500">Sign In</a></p>
+        </form>
+    </div>
+</body>
+
+</html>

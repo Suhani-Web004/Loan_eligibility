@@ -1,0 +1,97 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taam Members</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+ 
+
+  
+
+    <link rel="stylesheet" href="{% static 'css/members.css' %}">
+
+
+<body>
+  <body style="margin:0; height:100vh; background:url('/static/img/loan5.jpg') no-repeat center center/cover;"></body>
+
+<header class="p-3 opacity-75">
+    <nav>
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-semibold">Loan Eligibility Prediction System</div>
+            <div class="space-x-4">
+                <a href="{% url 'home' %}" class="text-white hover:underline">Home</a>
+                <a href="{% url 'prediction' %}" class="text-white hover:underline">CheckEligibility</a>
+                <a href="{% url 'team' %}" class="text-white hover:underline">Team Members</a>
+                <a href="{% url 'logout' %}" class="text-white hover:underline">Logout</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+      
+
+  <!-- Additional Content Section -->
+  <section class="transparent-section text-white py-12">
+    <div class="container mx-auto px-4">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold">Our Team </h2><h2 class="continuous-color-transition">Developers </h2> 
+            <p class="text-lg mt-4">Discover All The Powerful Qualities Of Our Developers:</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+            <div class="card" >
+                <img src="{% static "img/Pankaj kush.png" %}" alt="Sanskar Agarwal" class="rounded-full w-32 h-32 mx-auto mb-4">
+                <h3 class="card-title">Pankaj Kushwah</h3>
+                <p class="card-description">Pankaj Kushwah is known for his strong analytical skills and attention to detail. He excels in problem-solving and has a keen interest in data analysis and statistics. Pankaj is a dedicated team member who consistently delivers high-quality work.</p>
+                <div class="social-icons mt-4">
+                    <a href="https://github.com/Pankaj7223/" target="_blank" class="text-blue-600">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/pankaj-kushwah-515b99285/" target="_blank" class="text-blue-800 ml-4">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static "img/photo.jpg" %}" alt="Mohit Sharma" class="rounded-full w-32 h-32 mx-auto mb-4">
+                <h3 class="card-title">Padhi Suhani Srinibas</h3>
+                <p class="card-description">Padhi Suhani Srinibas is a creative thinker with a passion for design and user experience. She has a knack for translating ideas into visually appealing and user-friendly designs. Padhi is a valuable asset for any project that requires a strong design element.</p>
+                <div class="social-icons mt-4">
+                    <a href="" target="_blank" class="text-blue-600">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/padhi-suhani-srinibas-6b7268272/" target="_blank" class="text-blue-800 ml-4">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+  <!-- Footer Section -->
+  <footer class="transparent-section  text-white py-4">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">&copy; 2024 Loan Eligibility Prediction. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <div id="loading-spinner" class="hidden">
+    <div class="spinner"></div>
+  </div>
+  <script>
+    // Show the loading spinner when the page starts loading
+    window.addEventListener("load", function () {
+      document.getElementById("loading-spinner").style.display = "none";
+    });
+  </script>
+</body>
+
+</html>
