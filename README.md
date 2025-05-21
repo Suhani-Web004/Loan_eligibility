@@ -1,21 +1,13 @@
-# Group_Attendance_System
-
-## Project Setup
-
-### Requirements:
-- **8 GB RAM**  
-- **Code Editor:** VSCode / PyCharm  
-- **Git CLI**  
-- **Docker Desktop (optional)**  
-- **Web Browser:** Chrome / Edge  
-- **Python Version:** 3.12.4  
-- **Camera / Webcam**
-
-## Clone the Project
-
-```bash
-git clone https://github.com/Suhani-Web004/Group_Attendance_System
-
+# Loan_eligibility
+####  Project Setup
+`Requirements:`<br>
+- `8 GB RAM`<br>
+- `Code Editor VSCode / Pycharm`<br>
+- `Git CLI`<br>
+- `Docker Desktop`<br>
+- `Web Browser Chrome / Edge`<br>
+- `python 3.12.4`<br>
+  
 #### Clone the Project
 ```
 git clone git@https://github.com/Suhani-Web004/Loan_eligibility
@@ -47,7 +39,7 @@ pip install -r requirements.txt
 
 ##### Run the Project
 ```
-python app.py
+python manage.py runserver
 ```
 
 ##### View the Running Website
@@ -55,9 +47,12 @@ python app.py
 http://localhost:8000/
 ```
 
+#### Update the Code
+- `Reach the dentify-ai directory first`<br>
+
 ```
 git pull
 .\env\Scripts\activate
 pip install -r requirements.txt
-python app.py 
+python manage.py runserver
 ```
